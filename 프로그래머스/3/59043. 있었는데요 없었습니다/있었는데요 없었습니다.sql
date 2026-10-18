@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT O.ANIMAL_ID, O.NAME
+from ANIMAL_OUTS O
+left join ANIMAL_INS I
+on O.ANIMAL_ID = I.ANIMAL_ID
+where O.DATETIME < I.DATETIME
+order by I.DATETIME
